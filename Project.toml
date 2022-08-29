@@ -1,0 +1,4 @@
+name = "StructuralCalcUtils"
+uuid = "f6f5a544-d0dc-48f5-831d-cbd2043c1ecd"
+authors = ["josua "]
+version = "0.1.0"
