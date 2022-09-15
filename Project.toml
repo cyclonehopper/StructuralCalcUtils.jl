@@ -4,8 +4,5 @@ authors = ["josua "]
 version = "0.1.0"
 
 [deps]
-DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
-ODBC = "be6f12e9-ca4f-5eb2-a339-a4f995cc0291"
-Query = "1a8c2f83-1ff3-5112-b086-8aa67b057ba1"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
-XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

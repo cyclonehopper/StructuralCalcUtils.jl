@@ -1,7 +1,10 @@
 module StructuralCalcUtils
-using StaticArrays
 
-#include("filereader.jl")
-include("foo.jl")
+
+#include("foo.jl")
+include("filereader.jl")
+
+
+
 
 end # module StructuralCalcUtils
