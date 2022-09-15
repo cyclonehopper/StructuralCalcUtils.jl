@@ -2,3 +2,9 @@ name = "StructuralCalcUtils"
 uuid = "f6f5a544-d0dc-48f5-831d-cbd2043c1ecd"
 authors = ["josua "]
 version = "0.1.0"
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+ODBC = "be6f12e9-ca4f-5eb2-a339-a4f995cc0291"
+Query = "1a8c2f83-1ff3-5112-b086-8aa67b057ba1"
+XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
