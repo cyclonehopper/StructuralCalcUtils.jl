@@ -1,5 +1,5 @@
 module StructuralCalcUtils
 
-greet() = print("Hello World!")
+include("filereader.jl")
 
 end # module StructuralCalcUtils
