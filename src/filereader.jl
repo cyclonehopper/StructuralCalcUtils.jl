@@ -4,9 +4,6 @@ using ODBC, DataFrames, XLSX, Query
 export dfDesignMember, memblist16, dfMembers, dfsection, dfSecprop, dfBucklingLengths, Lcomb_with_bucklingLength, dfForcescCompression, dfForcesTension,
     secnum, secname
 
-
-
-
 function getMemberDesignData(
     dbconn::ODBC.Connection
 
@@ -18,7 +15,7 @@ membstring = 	dfDesignMember[dfDesignMember."Group" .== memb, Symbol("Member Lis
 memblist32 = parse.(Int32, split(membstring, ","))
 memblist16 = parse.(Int16, split(membstring, ","))
 queryMembers = DBInterface.execute(dbconn, "SELECT * FROM Members");	
-dfMembers=filter(i -> i.Member in memblist32, DataFrame(queryMembers))
+dfMembers = filter(i -> i.Member in memblist32, DataFrame(queryMembers))
 
 querySecprops = DBInterface.execute(dbconn, "SELECT * FROM `Section Properties`");
 dfSecprop = DataFrame(querySecprops)
