@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.11
+# v0.19.12
 
 using Markdown
 using InteractiveUtils
@@ -92,7 +92,16 @@ begin
 	df = dropmissing(DataFrame(XLSX.readtable(filepath*xlsfilename,xlssheetname,"A:AO",first_row=3)), :Name);
 	dfsection=df[(df.Name .== secname) ,:] 
 	""
+	l0 = 0.0
+	for i in eachindex(memblist16)
+		l0 = l0 + dfBucklingLengths[i,Symbol("Length (m)")] *1000.0
+	end
+	l0
+	
 end
+
+# ╔═╡ b9e90e5e-f660-412f-ba66-f4e65b7c2153
+
 
 # ╔═╡ 42c723ce-f6a7-44e5-93b1-1b1228b0112c
 md"""
@@ -113,14 +122,8 @@ Design member physical length
 # ╔═╡ d8589658-f585-4a69-bf7f-6cb98a724f23
 dfMembers
 
-# ╔═╡ 7831a348-1c7f-4745-902d-70099d8f0220
-begin
-l0 = 0.0
-for i in eachindex(memblist16)
-	l0 = l0 + dfBucklingLengths[i,Symbol("Length (m)")] *1000.0
-end
-	l0
-end
+# ╔═╡ 03623d8b-efc3-4cb0-a9a5-e81cd0bd9b29
+l0
 
 # ╔═╡ a41aff43-3e16-4be9-a05e-276f715e0794
 md"""
@@ -900,11 +903,12 @@ version = "2.3.9+0"
 # ╠═caff658b-ca3b-45e0-87e3-704111a3fe44
 # ╟─f99ac100-5fcf-4f79-8e29-bea36b818349
 # ╠═4102e85a-d5f5-4cf8-8ec1-4c4c00e72747
+# ╠═b9e90e5e-f660-412f-ba66-f4e65b7c2153
 # ╟─42c723ce-f6a7-44e5-93b1-1b1228b0112c
 # ╠═5566ab3f-7698-4eb9-9085-bdbfbc8aa4bb
 # ╟─d5f167dc-cd0a-4dec-80fb-b279651c68e1
 # ╠═d8589658-f585-4a69-bf7f-6cb98a724f23
-# ╠═7831a348-1c7f-4745-902d-70099d8f0220
+# ╠═03623d8b-efc3-4cb0-a9a5-e81cd0bd9b29
 # ╟─a41aff43-3e16-4be9-a05e-276f715e0794
 # ╠═f64c3a86-a819-47e8-8908-098e20f0d2df
 # ╠═f6a17cbf-d588-4e8e-859d-34d774722045
