@@ -1,13 +1,17 @@
 module StructuralCalcUtils
 
+
+
 function greet()
- "Hello! - StructuralCalcUtils"    
+    "Hello! - StructuralCalcUtils"
 end
 
-#include("foo.jl")
-#include("filereader.jl") 
-include("Ibeam_plus_bottom_tee.jl") 
+#===DESIGN SECTIONS MODULE=====#
+using PyCall
+pushfirst!(pyimport("sys")."path", "")
 
+include("Design_Sections.jl")
+include("Ibeam_plus_bottom_tee.jl")
 
 
 end # module StructuralCalcUtils
